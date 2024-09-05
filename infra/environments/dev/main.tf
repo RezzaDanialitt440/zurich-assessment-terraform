@@ -50,10 +50,20 @@ module "ecs" {
 module "security" {
   source       = "../../modules/security"
   vpc_id       = module.vpc.vpc_id
-  app_port     = 80
+  app_port     = 3000
   project_name = var.project_name
 
 }
+
+# module "codedeploy" {
+#   source = "../../modules/codedeploy"
+
+#   application_name       = "${var.project_name}-app"
+#   deployment_group_name  = "${var.project_name}-deployment-group"
+#   ecs_cluster_name       = module.ecs.ecs_cluster_id
+#   ecs_service_name       = module.ecs.ecs_service_name
+#   target_group_name      = module.alb.target_group_arn
+# }
 
 
 

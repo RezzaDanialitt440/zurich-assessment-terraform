@@ -1,0 +1,16 @@
+{
+    "name": "hello-world-api",
+    "version": "1.0.0",
+    "description": "A simple Hello Zurich Node.js API",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "build:dev": ""
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  
